@@ -1610,9 +1610,9 @@
     "restore": {
       "projectUniqueName": "scheduler",
       "projectName": "scheduler",
-      "projectPath": "C:\\Users\\steve\\Documents\\UiPath\\scheduler\\.local",
+      "projectPath": "C:\\Users\\steve\\Desktop\\projects\\hoya-hack\\scheduler\\.local",
       "packagesPath": "C:\\Users\\steve\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\steve\\Documents\\UiPath\\scheduler\\.local"
+      "outputPath": "C:\\Users\\steve\\Desktop\\projects\\hoya-hack\\scheduler\\.local"
     },
     "frameworks": {
       "net461": {
@@ -1640,14 +1640,5 @@
         }
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU3034",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Extended.Wpf.Toolkit 2.8' from source 'https://api.nuget.org/v3/index.json': This package is signed but not by a trusted signer.",
-      "libraryId": "Extended.Wpf.Toolkit"
-    }
-  ]
+  }
 }
