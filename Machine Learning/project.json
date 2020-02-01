@@ -1,6 +1,6 @@
 {
-  "name": "scheduler",
-  "description": "scheduler",
+  "name": "Machine Learning",
+  "description": "Blank Process",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.7.2]",

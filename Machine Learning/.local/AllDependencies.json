@@ -1604,15 +1604,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ken The Great\\.nuget\\packages\\": {}
+    "C:\\Users\\joule\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "scheduler",
-      "projectName": "scheduler",
-      "projectPath": "C:\\Users\\Ken The Great\\Documents\\GitHub\\hoya-hack\\scheduler\\.local",
-      "packagesPath": "C:\\Users\\Ken The Great\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ken The Great\\Documents\\GitHub\\hoya-hack\\scheduler\\.local"
+      "projectUniqueName": "Machine Learning",
+      "projectName": "Machine Learning",
+      "projectPath": "E:\\Software Development\\Projects\\GitHub\\hoya-hack\\Machine Learning\\.local",
+      "packagesPath": "C:\\Users\\joule\\.nuget\\packages\\",
+      "outputPath": "E:\\Software Development\\Projects\\GitHub\\hoya-hack\\Machine Learning\\.local"
     },
     "frameworks": {
       "net461": {
