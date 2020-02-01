@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Flowchart" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="653.6,696.8" sap2010:WorkflowViewState.IdRef="Flowchart_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Flowchart" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="856.8,716" sap2010:WorkflowViewState.IdRef="Flowchart_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=mscorlib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -49,6 +49,11 @@
       <AssemblyReference>System.Data.Entity</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
   <Flowchart DisplayName="Flowchart" sap:VirtualizedContainerService.HintSize="836.8,656" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="bool_error" />
@@ -59,6 +64,20 @@
       <Variable x:TypeArguments="s:DateTime" Default="[DateTime.Parse(&quot;December 31, 2000&quot;)]" Name="date_LastEventEnd" />
       <Variable x:TypeArguments="s:DateTime" Default="[DateTime.Parse(&quot;December 31, 2000&quot;)]" Name="date_LastEventStart" />
       <Variable x:TypeArguments="s:DateTime" Name="data_TargetDate" />
+      <Variable x:TypeArguments="s:DateTime" Name="date_TodayDate" />
+      <Variable x:TypeArguments="sc:IEnumerable" Name="elem_eventsElements" />
+      <Variable x:TypeArguments="x:Int32" Name="int_MaxEvents" />
+      <Variable x:TypeArguments="x:Int64" Name="int_MonthOffset" />
+      <Variable x:TypeArguments="x:Int32" Name="int_MyCounter" />
+      <Variable x:TypeArguments="x:String" Name="str_AccountName" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="str_email" />
+      <Variable x:TypeArguments="x:String" Name="str_LatestEventName" />
+      <Variable x:TypeArguments="x:String" Name="str_SelectMonth" />
+      <Variable x:TypeArguments="x:String" Name="str_Selector" />
+      <Variable x:TypeArguments="x:String" Name="str_TextInput" />
+      <Variable x:TypeArguments="x:String" Default="[DateTime.Now.Year.ToString]" Name="str_TodayYear" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="str_URL_Calendar" />
+      <Variable x:TypeArguments="x:String" Name="variable1" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -81,7 +100,7 @@
           <av:PointCollection x:Key="ConnectorLocation">470,74.4 470,104.4 450,104.4 450,125.6</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="User Input and Options" sap:VirtualizedContainerService.HintSize="375.2,677.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+      <Sequence DisplayName="User Input and Options" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -150,12 +169,12 @@
                 </sap:WorkflowViewStateService.ViewState>
               </Sequence>
               <FlowStep.Next>
-                <FlowDecision x:Name="__ReferenceID4" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="78.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                <FlowDecision x:Name="__ReferenceID4" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <av:Point x:Key="ShapeLocation">410.8,336.4</av:Point>
-                      <av:Size x:Key="ShapeSize">78.4,87.2</av:Size>
+                      <av:Size x:Key="ShapeSize">79.2,87.2</av:Size>
                       <av:PointCollection x:Key="TrueConnector">410.8,380 270,380</av:PointCollection>
                       <av:PointCollection x:Key="FalseConnector">489.2,380 519.2,380 519.2,390.42 540,390.42</av:PointCollection>
                     </scg:Dictionary>

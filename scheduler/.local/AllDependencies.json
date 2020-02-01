@@ -1604,15 +1604,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\joule\\.nuget\\packages\\": {}
+    "C:\\Users\\rashi\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "scheduler",
       "projectName": "scheduler",
-      "projectPath": "E:\\Software Development\\Projects\\GitHub\\hoya-hack\\scheduler\\.local",
-      "packagesPath": "C:\\Users\\joule\\.nuget\\packages\\",
-      "outputPath": "E:\\Software Development\\Projects\\GitHub\\hoya-hack\\scheduler\\.local"
+      "projectPath": "C:\\Users\\rashi\\Documents\\GitHub\\hoya-hack\\scheduler\\.local",
+      "packagesPath": "C:\\Users\\rashi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rashi\\Documents\\GitHub\\hoya-hack\\scheduler\\.local"
     },
     "frameworks": {
       "net461": {
