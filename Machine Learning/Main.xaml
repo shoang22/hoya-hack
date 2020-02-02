@@ -54,31 +54,34 @@
       <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap:VirtualizedContainerService.HintSize="724.8,3116" sap2010:WorkflowViewState.IdRef="Sequence_15">
+  <Sequence sap:VirtualizedContainerService.HintSize="724.8,3766.4" sap2010:WorkflowViewState.IdRef="Sequence_15">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="683.2,3023.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
+    <Sequence sap:VirtualizedContainerService.HintSize="683.2,3673.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:Int32" Name="intStart" />
+      </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="641.6,2930.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_6" WorkbookPath="Book1.xlsx">
+      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="641.6,3580.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_6" WorkbookPath="Book1.xlsx">
         <ui:ExcelApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
             </ActivityAction.Argument>
-            <Sequence sap:VirtualizedContainerService.HintSize="608,2820.8" sap2010:WorkflowViewState.IdRef="Sequence_14">
+            <Sequence sap:VirtualizedContainerService.HintSize="608,3471.2" sap2010:WorkflowViewState.IdRef="Sequence_14">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence sap:VirtualizedContainerService.HintSize="566.4,2603.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
+              <Sequence sap:VirtualizedContainerService.HintSize="566.4,3057.6" sap2010:WorkflowViewState.IdRef="Sequence_11">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -93,13 +96,14 @@
                   <ui:ExcelInsertDeleteColumns DisplayName="Insert/Delete Columns" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="ExcelInsertDeleteColumns_1" Mode="Add" NoColumns="100" Position="1" SheetName="Sheet1" />
                   <ui:ExcelInsertDeleteRows DisplayName="Insert/Delete Rows" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="ExcelInsertDeleteRows_1" Mode="Add" NoRows="100" Position="1" SheetName="Sheet1" />
                 </Sequence>
-                <Sequence DisplayName="Input" sap:VirtualizedContainerService.HintSize="524.8,2292.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <Sequence DisplayName="Input" sap:VirtualizedContainerService.HintSize="524.8,2747.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:Int32" Name="Training_Houses_Total" />
                     <Variable x:TypeArguments="x:String" Name="Bedrooms" />
                     <Variable x:TypeArguments="x:String" Name="Bathrooms" />
                     <Variable x:TypeArguments="x:String" Name="SquareFt" />
                     <Variable x:TypeArguments="x:String" Name="YearBuilt" />
+                    <Variable x:TypeArguments="x:String" Name="HousePrice" />
                   </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -122,61 +126,49 @@
                       <InArgument x:TypeArguments="x:Int32">1</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <DoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="483.2,1804.8" sap2010:WorkflowViewState.IdRef="DoWhile_2" Condition="[intStart &lt;= Training_Houses_Total]">
-                    <Sequence sap:VirtualizedContainerService.HintSize="416.8,1642.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
-                      <Sequence.Variables>
-                        <Variable x:TypeArguments="x:String" Name="HousePrice" />
-                      </Sequence.Variables>
+                  <DoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="483.2,2259.2" sap2010:WorkflowViewState.IdRef="DoWhile_2" Condition="[intStart &lt;= Training_Houses_Total]">
+                    <Sequence sap:VirtualizedContainerService.HintSize="375.2,2096.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:InputDialog Label="{x:Null}" Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="375.2,92.8" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Title="Input the amount of Bedrooms">
+                      <ui:InputDialog Options="{x:Null}" Title="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Input the amount of Bedrooms">
                         <ui:InputDialog.Result>
                           <OutArgument x:TypeArguments="x:String">[Bedrooms]</OutArgument>
                         </ui:InputDialog.Result>
                       </ui:InputDialog>
-                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,180.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <ui:ExcelWriteCell Cell="[&quot;A&quot; &amp; intStart.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_1" SheetName="Sheet1" Text="[Bedrooms]" />
-                      </Sequence>
-                      <ui:InputDialog Label="{x:Null}" Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="375.2,92.8" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Title="Input amount of bathrooms">
+                      <ui:ExcelWriteCell Cell="[&quot;A&quot; &amp; intStart.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_1" SheetName="Sheet1" Text="[Bedrooms]" />
+                      <ui:ExcelWriteCell Cell="[&quot;F&quot; &amp; intStart.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_7" SheetName="Sheet1" Text="[&quot;=VALUE(A&quot; + intStart.ToString +&quot;)&quot;]" />
+                      <ui:InputDialog Options="{x:Null}" Title="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Input amount of bathrooms">
                         <ui:InputDialog.Result>
                           <OutArgument x:TypeArguments="x:String">[Bathrooms]</OutArgument>
                         </ui:InputDialog.Result>
                       </ui:InputDialog>
-                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,180.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <ui:ExcelWriteCell Cell="[&quot;B&quot; &amp; intStart.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_2" SheetName="Sheet1" Text="[Bathrooms]" />
-                      </Sequence>
-                      <ui:InputDialog Label="{x:Null}" Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="375.2,92.8" sap2010:WorkflowViewState.IdRef="InputDialog_4" IsPassword="False" Title="Input amount of square feet">
+                      <ui:ExcelWriteCell Cell="[&quot;B&quot; &amp; intStart.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_2" SheetName="Sheet1" Text="[Bathrooms]" />
+                      <ui:ExcelWriteCell Cell="[&quot;G&quot; &amp; intStart.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_8" SheetName="Sheet1" Text="[&quot;=VALUE(B&quot; + intStart.ToString +&quot;)&quot;]" />
+                      <ui:InputDialog Options="{x:Null}" Title="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="InputDialog_4" IsPassword="False" Label="Input amount of square feet">
                         <ui:InputDialog.Result>
                           <OutArgument x:TypeArguments="x:String">[SquareFt]</OutArgument>
                         </ui:InputDialog.Result>
                       </ui:InputDialog>
-                      <ui:ExcelWriteCell Cell="[&quot;C&quot; &amp; intStart.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="375.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_3" SheetName="Sheet1" Text="[SquareFt]" />
-                      <ui:InputDialog Label="{x:Null}" Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="375.2,92.8" sap2010:WorkflowViewState.IdRef="InputDialog_5" IsPassword="False" Title="Input the year built">
+                      <ui:ExcelWriteCell Cell="[&quot;C&quot; &amp; intStart.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_3" SheetName="Sheet1" Text="[SquareFt]" />
+                      <ui:ExcelWriteCell Cell="[&quot;H&quot; &amp; intStart.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_9" SheetName="Sheet1" Text="[&quot;=VALUE(C&quot; + intStart.ToString +&quot;)&quot;]" />
+                      <ui:InputDialog Options="{x:Null}" Title="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="InputDialog_5" IsPassword="False" Label="Input the year built">
                         <ui:InputDialog.Result>
                           <OutArgument x:TypeArguments="x:String">[YearBuilt]</OutArgument>
                         </ui:InputDialog.Result>
                       </ui:InputDialog>
-                      <ui:ExcelWriteCell Cell="[&quot;D&quot; &amp; intStart.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="375.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_4" SheetName="Sheet1" Text="[YearBuilt]" />
-                      <ui:InputDialog Label="{x:Null}" Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="375.2,92.8" sap2010:WorkflowViewState.IdRef="InputDialog_6" IsPassword="False" Title="Input the price of this house">
+                      <ui:ExcelWriteCell Cell="[&quot;D&quot; &amp; intStart.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_4" SheetName="Sheet1" Text="[YearBuilt]" />
+                      <ui:ExcelWriteCell Cell="[&quot;I&quot; &amp; intStart.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_10" SheetName="Sheet1" Text="[&quot;=VALUE(D&quot; + intStart.ToString +&quot;)&quot;]" />
+                      <ui:InputDialog Options="{x:Null}" Title="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="InputDialog_6" IsPassword="False" Label="Input the price of this house">
                         <ui:InputDialog.Result>
                           <OutArgument x:TypeArguments="x:String">[HousePrice]</OutArgument>
                         </ui:InputDialog.Result>
                       </ui:InputDialog>
-                      <ui:ExcelWriteCell Cell="[&quot;E&quot; &amp; intStart.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="375.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_5" SheetName="Sheet1" Text="[HousePrice]" />
-                      <Assign sap:VirtualizedContainerService.HintSize="375.2,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <ui:ExcelWriteCell Cell="[&quot;E&quot; &amp; intStart.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_5" SheetName="Sheet1" Text="[HousePrice]" />
+                      <ui:ExcelWriteCell Cell="[&quot;J&quot; &amp; intStart.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_11" SheetName="Sheet1" Text="[&quot;=VALUE(E&quot; + intStart.ToString +&quot;)&quot;]" />
+                      <Assign sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="Assign_2">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:Int32">[intStart]</OutArgument>
                         </Assign.To>
@@ -188,12 +180,21 @@
                   </DoWhile>
                 </Sequence>
               </Sequence>
-              <Sequence sap:VirtualizedContainerService.HintSize="566.4,84.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
+              <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="566.4,280.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
+                <Assign sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Int32">[intStart]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Int32">[intStart-1]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <ui:ExcelWriteCell Cell="K1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_6" SheetName="Sheet1" Text="[&quot;=MMULT(MINVERSE(F1:I&quot; + intStart.ToString + &quot;),J1:J&quot; + intStart.ToString + &quot;)&quot;]" />
               </Sequence>
             </Sequence>
           </ActivityAction>
