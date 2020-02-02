@@ -1659,9 +1659,9 @@
     "restore": {
       "projectUniqueName": "Machine Learning",
       "projectName": "Machine Learning",
-      "projectPath": "E:\\Software Development\\Projects\\GitHub\\hoya-hack\\Machine Learning\\.local",
+      "projectPath": "E:\\Software Development\\Projects\\GitHub\\Home4$\\Machine Learning\\.local",
       "packagesPath": "C:\\Users\\joule\\.nuget\\packages\\",
-      "outputPath": "E:\\Software Development\\Projects\\GitHub\\hoya-hack\\Machine Learning\\.local"
+      "outputPath": "E:\\Software Development\\Projects\\GitHub\\Home4$\\Machine Learning\\.local"
     },
     "frameworks": {
       "net461": {
@@ -1694,14 +1694,5 @@
         }
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU3034",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Microsoft.Office.Interop.Excel 15.0.4795.1000' from source 'https://api.nuget.org/v3/index.json': This package is signed but not by a trusted signer.",
-      "libraryId": "Microsoft.Office.Interop.Excel"
-    }
-  ]
+  }
 }
